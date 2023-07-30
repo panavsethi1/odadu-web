@@ -1,0 +1,213 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap");
+@import "~bootstrap/scss/bootstrap";
+
+$white: #ffffff;
+$white-secondary: #fff7e9;
+$black: #000000;
+$orange-primary: #f94f03;
+$blue-primary: #072068;
+$blue-secondary: #5f9df7;
+
+@mixin respond($breakpoint) {
+	@if $breakpoint == xs {
+		@media only screen and (max-width: 36em) {
+			@content;
+		} //576px
+	}
+	@if $breakpoint == sm {
+		@media only screen and (max-width: 48em) {
+			@content;
+		} //768px
+	}
+	@if $breakpoint == md {
+		@media only screen and (max-width: 62em) {
+			@content;
+		} //992px
+	}
+	@if $breakpoint == lg {
+		@media only screen and (max-width: 75em) {
+			@content;
+		} //1200px
+	}
+}
+
+* {
+	font-family: "Montserrat", sans-serif;
+}
+
+@mixin section-header {
+	& h1 {
+		text-align: center;
+		text-transform: uppercase;
+		color: $blue-primary;
+		text-shadow: 1px 3px 2px rgba($black, 0.4);
+		margin-bottom: 2rem;
+
+		@include respond(xs) {
+			text-shadow: 1px 2px 2px rgba($black, 0.4);
+		}
+	}
+}
+
+@mixin orange-button {
+	& a {
+		text-decoration: none;
+		background-color: #f94f03;
+		color: $white;
+		display: block;
+		padding: 0.5rem 1rem;
+		border-radius: 6px;
+		margin-top: 1rem;
+		text-align: center;
+		text-transform: uppercase;
+	}
+}
+
+.hero {
+	height: 100vh;
+	background-image: linear-gradient(to right bottom, rgba($white, 0.5), rgba($white, 0)), url(./assets/hero-bg.jpg);
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&__content {
+		width: 100%;
+		text-align: center;
+
+		&__logo {
+			width: 40%;
+			@include respond(md) {
+				width: 60%;
+			}
+			@include respond(sm) {
+				width: 100%;
+			}
+
+			filter: drop-shadow(1px 2px 2px rgba($black, 0.4));
+		}
+
+		&__buttons {
+			margin: 2rem auto;
+			width: 40%;
+			display: flex;
+			justify-content: space-around;
+			align-items: center;
+
+			@include respond(md) {
+				width: 60%;
+			}
+
+			@include respond(sm) {
+				width: 80%;
+				flex-direction: column;
+				gap: 1rem;
+			}
+
+			& a {
+				color: $white;
+				text-transform: uppercase;
+				text-decoration: none;
+				background-color: $blue-primary;
+				padding: 0.5em 2rem;
+				min-width: 12rem;
+				border-radius: 500px;
+				box-shadow: 3px 5px 2px rgba($black, 0.4);
+			}
+		}
+	}
+}
+
+.about {
+	padding-top: 4rem;
+	padding-bottom: 2rem;
+
+	@include section-header;
+
+	&__col-1 {
+		padding: 1rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		& img {
+			width: 100%;
+			border-radius: 12px;
+			box-shadow: 1px 2px 4px rgba($black, 0.4);
+		}
+	}
+
+	&__col-2 {
+		padding: 2rem 1rem;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+
+		& h2 {
+			text-transform: uppercase;
+			color: $blue-primary;
+			text-shadow: 1px 2px 2px rgba($black, 0.4);
+
+			& span {
+				color: $orange-primary;
+			}
+		}
+	}
+}
+
+.packages {
+	padding-top: 2rem;
+	padding-bottom: 2rem;
+	@include section-header;
+
+	&__card {
+		margin: 1rem;
+		padding: 1rem;
+		border-radius: 8px;
+		box-shadow: 1px 2px 4px rgba($black, 0.4);
+
+		& img {
+			width: 100%;
+			margin-bottom: 1rem;
+			border-radius: 6px;
+		}
+		& h3 {
+			text-transform: capitalize;
+		}
+
+		@include orange-button;
+	}
+}
+
+.contact {
+	padding-top: 2rem;
+	padding-bottom: 4rem;
+	@include section-header;
+
+	& p {
+		display: block;
+		text-align: center;
+		margin-top: -1rem;
+		margin-bottom: 2rem;
+	}
+
+	@include orange-button;
+
+	& a {
+		margin-top: 3rem;
+	}
+}
+
+footer {
+	background-color: $blue-primary;
+	height: 3rem;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	& p {
+		color: $white;
+		margin: 0;
+	}
+}
