@@ -65,8 +65,9 @@ $blue-secondary: #5f9df7;
 
 .hero {
 	height: 100vh;
-	background-image: linear-gradient(to right bottom, rgba($white, 0.5), rgba($white, 0)), url(./assets/hero-bg.jpg);
-	background-position: center;
+	background-image: linear-gradient(to right bottom, rgba($blue-primary, 0.5), rgba($orange-primary, 0.5)),
+		url(./assets/hero-backdrop.jpg);
+	background-position: left center;
 	background-size: cover;
 	display: flex;
 	justify-content: center;
@@ -89,7 +90,7 @@ $blue-secondary: #5f9df7;
 		}
 
 		&__buttons {
-			margin: 2rem auto;
+			margin: 0 auto;
 			width: 40%;
 			display: flex;
 			justify-content: space-around;
@@ -171,6 +172,9 @@ $blue-secondary: #5f9df7;
 			width: 100%;
 			margin-bottom: 1rem;
 			border-radius: 6px;
+			aspect-ratio: 3/2;
+			object-fit: cover;
+			object-position: center;
 		}
 		& h3 {
 			text-transform: capitalize;

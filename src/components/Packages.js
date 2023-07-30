@@ -1,5 +1,7 @@
 import React from 'react';
-import cardImg from '../assets/hero-bg.jpg';
+import cardImg1 from '../assets/odadu-card-1.jpg';
+import cardImg2 from '../assets/odadu-card-2.jpg';
+import cardImg3 from '../assets/odadu-card-3.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 
 function Packages() {
@@ -10,7 +12,7 @@ function Packages() {
 				<Row>
 					<Col lg={4} md={6} sm={12}>
 						<div className='packages__card'>
-							<img src={cardImg} alt='' />
+							<img src={cardImg2} alt='' />
 							<h3>package name</h3>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -23,7 +25,7 @@ function Packages() {
 					</Col>
 					<Col lg={4} md={6} sm={12}>
 						<div className='packages__card'>
-							<img src={cardImg} alt='' />
+							<img src={cardImg1} alt='' />
 							<h3>package name</h3>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.
@@ -36,7 +38,7 @@ function Packages() {
 					</Col>
 					<Col lg={4} md={6} sm={12}>
 						<div className='packages__card'>
-							<img src={cardImg} alt='' />
+							<img src={cardImg3} alt='' />
 							<h3>package name</h3>
 							<p>
 								Lorem ipsum, dolor sit amet consectetur adipisicing elit.

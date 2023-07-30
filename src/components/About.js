@@ -1,5 +1,5 @@
 import React from 'react';
-import aboutImg from '../assets/hero-bg.jpg';
+import aboutImg from '../assets/about-image.jpg';
 import { Col, Container, Row } from 'react-bootstrap';
 
 function About() {
