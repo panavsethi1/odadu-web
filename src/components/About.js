@@ -13,16 +13,26 @@ function About() {
 					</Col>
 					<Col md={12} lg={6} className='about__col-2'>
 						<h2>
-							Experience Dubai with <span>Odadu</span>
+							Experience mid-east with <span>Odadu</span>
 						</h2>
 						<p>
-							Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quos
-							quibusdam quis sed iste, eaque inventore dolores magni dolorem
-							molestias porro, error nulla enim numquam voluptatem facilis
-							impedit nobis non, aperiam illum explicabo provident! Quaerat
-							autem suscipit nihil, tempora harum similique repellat eaque
-							perspiciatis quasi labore. Officia aliquam necessitatibus nisi
-							maiores.
+							Odadu means "love travelling" in regional indian language. With
+							deep love for travelling, our founders set up the parent company
+							in 2013 back in India. With robust growth and momentum, the
+							company was soon found setting up offices in Australia and now
+							UAE.
+							<br />
+							<br />
+							Odadu caters to B2B segment of travel market having strong hold in
+							hotels and sightseeing verticals of travel. Accor, Hilton,
+							Millennium group of properties are our growing partners across
+							different hotel verticals. With growing numbers in "Turkey, Egypt,
+							Jordan" along with UAE, Odadu travels FZ LLC in Dubai is well
+							positioned to capture the above market.
+							<br />
+							<br />
+							For partnerships, drop us a mail at{' '}
+							<a href='mailto:info@odaduu.com'>info@odaduu.com</a>.
 						</p>
 					</Col>
 				</Row>

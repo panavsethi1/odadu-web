@@ -36,6 +36,27 @@ function PaymentModal(props) {
 					<Form.Label>Amount</Form.Label>
 					<Form.Control type='text' />
 				</Form.Group>
+				<Form.Group className='mb-3'>
+					<Form.Label>Currency</Form.Label>
+					<Form.Check
+						name='payment-currency'
+						type='radio'
+						label='USD'
+						id={'payment-currency-usd'}
+					/>
+					<Form.Check
+						name='payment-currency'
+						type='radio'
+						label='INR'
+						id={'payment-currency-inr'}
+					/>
+					<Form.Check
+						name='payment-currency'
+						type='radio'
+						label='AED'
+						id={'payment-currency-aed'}
+					/>
+				</Form.Group>
 			</Modal.Body>
 			<Modal.Footer>
 				<Button onClick={props.onHide}>Confirm</Button>

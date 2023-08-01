@@ -40,12 +40,7 @@ $blue-secondary: #5f9df7;
 		text-align: center;
 		text-transform: uppercase;
 		color: $blue-primary;
-		text-shadow: 1px 3px 2px rgba($black, 0.4);
 		margin-bottom: 2rem;
-
-		@include respond(xs) {
-			text-shadow: 1px 2px 2px rgba($black, 0.4);
-		}
 	}
 }
 
@@ -114,7 +109,7 @@ $blue-secondary: #5f9df7;
 				padding: 0.5em 2rem;
 				min-width: 12rem;
 				border-radius: 500px;
-				box-shadow: 3px 5px 2px rgba($black, 0.4);
+				box-shadow: 1px 3px 2px rgba($black, 0.4);
 			}
 		}
 	}
@@ -145,12 +140,22 @@ $blue-secondary: #5f9df7;
 		flex-direction: column;
 		justify-content: center;
 
+		@include respond(sm) {
+			padding-bottom: 0;
+		}
+
 		& h2 {
 			text-transform: uppercase;
 			color: $blue-primary;
-			text-shadow: 1px 2px 2px rgba($black, 0.4);
-
+			margin-bottom: 2rem;
 			& span {
+				color: $orange-primary;
+			}
+		}
+
+		& p {
+			margin-bottom: 0;
+			& a {
 				color: $orange-primary;
 			}
 		}
@@ -162,11 +167,57 @@ $blue-secondary: #5f9df7;
 	padding-bottom: 2rem;
 	@include section-header;
 
+	&__container {
+		overflow-x: hidden;
+		padding: 0 2rem;
+	}
+
+	&__swiper {
+		overflow: visible !important;
+		&__slide {
+			padding-bottom: 2rem;
+		}
+		& .swiper-button-prev {
+			left: -1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 500px;
+			background-color: $blue-primary;
+			&::after {
+				font-size: 1rem;
+				margin-left: -0.2rem;
+				color: $white;
+			}
+		}
+		& .swiper-button-next {
+			right: -1rem;
+			width: 2rem;
+			height: 2rem;
+			border-radius: 500px;
+			background-color: $blue-primary;
+			&::after {
+				font-size: 1rem;
+				margin-right: -0.2rem;
+				color: $white;
+			}
+		}
+
+		& .swiper-pagination {
+			bottom: 0.5rem !important;
+
+			& .swiper-pagination-bullet {
+				background-color: $blue-primary;
+			}
+		}
+	}
+
 	&__card {
-		margin: 1rem;
-		padding: 1rem;
+		margin: 1rem auto;
+		padding: 1.4rem;
+		max-width: 600px;
 		border-radius: 8px;
-		box-shadow: 1px 1px 2px rgba($black, 0.4);
+		/* border: 2px solid #fedaca; */
+		box-shadow: 0px 0px 17px -8px rgb(0 0 0 / 50%);
 
 		& img {
 			width: 100%;
@@ -205,13 +256,18 @@ $blue-secondary: #5f9df7;
 
 footer {
 	background-color: $blue-primary;
-	height: 3rem;
+	padding: 1rem 0;
 	display: flex;
+	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 
 	& p {
 		color: $white;
 		margin: 0;
+
+		& span {
+			color: lighten($orange-primary, 20%);
+		}
 	}
 }
