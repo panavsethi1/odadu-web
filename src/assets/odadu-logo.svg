@@ -6,6 +6,18 @@
 	.st0{fill:#072068;}
 	.st1{fill:#F94F03;}
 	.st2{fill:none;stroke:#072068;stroke-width:0.9615;stroke-linecap:round;stroke-linejoin:round;stroke-miterlimit:10;}
+	@keyframes rotate {
+    	0% {
+        	transform: rotate(0deg);
+    	}
+    	100% {
+			transform: rotate(360deg);
+    	}
+	}
+	.animation {
+		animation: rotate 7s infinite linear;
+		transform-origin: 25%;
+	}
 </style>
 <g>
 	<path class="st0" d="M149.39,66.31c-10.64,0-20.6,2.88-29.17,7.91l8.81,6.87c6.18-2.92,13.08-4.56,20.36-4.56
@@ -34,7 +46,7 @@
 		c-4.93-0.66-9.39-3.36-11.98-7.61c-0.06-0.1-0.12-0.21-0.18-0.31c-0.01-0.02-0.02-0.03-0.03-0.05c-1.33-2.27-1.93-4.88-1.93-7.5
 		v-28.79h7.94v26.67c0,3.14,1.42,6.13,3.91,8.04c2.21,1.7,4.78,2.68,7.39,2.69c5.1,0.01,8.79-3.67,9.77-4.63
 		c0.02-0.02,0.04-0.04,0.06-0.06c2-2.02,3.03-4.8,3.03-7.64v-25.07H525.66z"/>
-	<g>
+	<g class='animation'>
 		<g>
 			<line class="st2" x1="147.72" y1="43.96" x2="147.72" y2="52.72"/>
 			<line class="st2" x1="149.52" y1="195.34" x2="149.52" y2="204.1"/>
